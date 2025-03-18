@@ -1,10 +1,10 @@
 {
   "extName": {
     "message": "name in src/locales/en/messages.json",
-    "description": "Extension name"
+    "description": "Web Scraping Extension"
   },
   "extDescription": {
     "message": "description in src/locales/en/messages.json",
-    "description": "Extension description"
+    "description": "A simple web scraping extension to make resumes from articles."
   }
 }
