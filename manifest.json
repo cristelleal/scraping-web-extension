@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Web Scraping Extension",
+  "name": "WebSummary",
   "version": "1.0",
   "description": "A simple web scraping extension to make resumes from articles.",
   "options_ui": {

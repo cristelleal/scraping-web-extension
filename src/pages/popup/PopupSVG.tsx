@@ -1,0 +1,727 @@
+export const PopupSVG = () => {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                <defs>
+                  <linearGradient
+                    id="bgGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#4338CA" />
+                    <stop offset="50%" stop-color="#6366F1" />
+                    <stop offset="100%" stop-color="#7C3AED" />
+                    <animate
+                      attributeName="x1"
+                      values="0%;10%;0%"
+                      dur="10s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="y1"
+                      values="0%;10%;0%"
+                      dur="10s"
+                      repeatCount="indefinite"
+                    />
+                  </linearGradient>
+
+                  <linearGradient
+                    id="summaryGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#0D9488" />
+                    <stop offset="50%" stop-color="#14B8A6" />
+                    <stop offset="100%" stop-color="#2DD4BF" />
+                    <animate
+                      attributeName="x2"
+                      values="100%;90%;100%"
+                      dur="8s"
+                      repeatCount="indefinite"
+                    />
+                  </linearGradient>
+
+                  <linearGradient
+                    id="checkGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#EA580C" />
+                    <stop offset="50%" stop-color="#F97316" />
+                    <stop offset="100%" stop-color="#FB923C" />
+                    <animate
+                      attributeName="y2"
+                      values="100%;90%;100%"
+                      dur="7s"
+                      repeatCount="indefinite"
+                    />
+                  </linearGradient>
+
+                  <linearGradient
+                    id="searchGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#DB2777" />
+                    <stop offset="50%" stop-color="#EC4899" />
+                    <stop offset="100%" stop-color="#F472B6" />
+                    <animate
+                      attributeName="x2"
+                      values="100%;90%;100%"
+                      dur="6s"
+                      repeatCount="indefinite"
+                    />
+                  </linearGradient>
+
+                  <filter
+                    id="glowMain"
+                    x="-20%"
+                    y="-20%"
+                    width="140%"
+                    height="140%"
+                  >
+                    <feGaussianBlur stdDeviation="4" result="blur" />
+                    <feComposite
+                      in="SourceGraphic"
+                      in2="blur"
+                      operator="over"
+                    />
+                  </filter>
+
+                  <filter
+                    id="paperShadow"
+                    x="-10%"
+                    y="-10%"
+                    width="120%"
+                    height="120%"
+                  >
+                    <feDropShadow
+                      dx="2"
+                      dy="3"
+                      stdDeviation="2.5"
+                      flood-color="#2D3748"
+                      flood-opacity="0.4"
+                    />
+                  </filter>
+
+                  <filter
+                    id="searchGlow"
+                    x="-30%"
+                    y="-30%"
+                    width="160%"
+                    height="160%"
+                  >
+                    <feGaussianBlur stdDeviation="2" result="blur" />
+                    <feComposite
+                      in="SourceGraphic"
+                      in2="blur"
+                      operator="over"
+                    />
+                  </filter>
+
+                  <pattern
+                    id="subtlePattern"
+                    width="10"
+                    height="10"
+                    patternUnits="userSpaceOnUse"
+                  >
+                    <rect width="10" height="10" fill="#F9FAFB" />
+                    <rect width="5" height="5" fill="#F1F5F9" opacity="0.5" />
+                  </pattern>
+
+                  <radialGradient
+                    id="pulseGlow"
+                    cx="50%"
+                    cy="50%"
+                    r="50%"
+                    fx="50%"
+                    fy="50%"
+                  >
+                    <stop offset="0%" stop-color="white" stop-opacity="0.6" />
+                    <stop offset="100%" stop-color="white" stop-opacity="0" />
+                    <animate
+                      attributeName="r"
+                      values="50%;70%;50%"
+                      dur="3s"
+                      repeatCount="indefinite"
+                    />
+                  </radialGradient>
+                </defs>
+
+                <circle
+                  cx="64"
+                  cy="64"
+                  r="62"
+                  fill="url(#bgGradient)"
+                  filter="url(#glowMain)"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0.95;1;0.95"
+                    dur="4s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+
+                <circle
+                  cx="64"
+                  cy="64"
+                  r="58"
+                  fill="none"
+                  stroke="white"
+                  stroke-width="0.5"
+                  opacity="0.3"
+                >
+                  <animate
+                    attributeName="r"
+                    values="58;64;58"
+                    dur="5s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0.3;0.1;0.3"
+                    dur="5s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+
+                <rect
+                  x="32"
+                  y="28"
+                  width="64"
+                  height="72"
+                  rx="4"
+                  fill="url(#subtlePattern)"
+                  filter="url(#paperShadow)"
+                  transform="skewX(-0.5)"
+                >
+                  <animate
+                    attributeName="transform"
+                    values="skewX(-0.5);skewX(0.5);skewX(-0.5)"
+                    dur="8s"
+                    repeatCount="indefinite"
+                  />
+                </rect>
+
+                <rect
+                  x="32"
+                  y="28"
+                  width="64"
+                  height="72"
+                  rx="4"
+                  fill="none"
+                  stroke="#E2E8F0"
+                  stroke-width="0.5"
+                />
+
+                <rect
+                  x="32"
+                  y="28"
+                  width="64"
+                  height="10"
+                  rx="4"
+                  fill="#E2E8F0"
+                  opacity="0.8"
+                />
+                <circle cx="38" cy="33" r="2" fill="#FB7185" />
+                <circle cx="44" cy="33" r="2" fill="#FBBF24" />
+                <circle cx="50" cy="33" r="2" fill="#34D399" />
+
+                <g>
+                  <rect
+                    x="38"
+                    y="46"
+                    width="52"
+                    height="4"
+                    rx="2"
+                    fill="#E2E8F0"
+                    opacity="0.9"
+                  >
+                    <animate
+                      attributeName="width"
+                      values="0;52"
+                      dur="1s"
+                      begin="0.5s"
+                      fill="freeze"
+                    />
+                  </rect>
+                  <rect
+                    x="38"
+                    y="54"
+                    width="48"
+                    height="4"
+                    rx="2"
+                    fill="#E2E8F0"
+                    opacity="0.9"
+                  >
+                    <animate
+                      attributeName="width"
+                      values="0;48"
+                      dur="1s"
+                      begin="0.8s"
+                      fill="freeze"
+                    />
+                  </rect>
+                  <rect
+                    x="38"
+                    y="62"
+                    width="52"
+                    height="4"
+                    rx="2"
+                    fill="#E2E8F0"
+                    opacity="0.9"
+                  >
+                    <animate
+                      attributeName="width"
+                      values="0;52"
+                      dur="1s"
+                      begin="1.1s"
+                      fill="freeze"
+                    />
+                  </rect>
+                  <rect
+                    x="38"
+                    y="70"
+                    width="45"
+                    height="4"
+                    rx="2"
+                    fill="#E2E8F0"
+                    opacity="0.9"
+                  >
+                    <animate
+                      attributeName="width"
+                      values="0;45"
+                      dur="1s"
+                      begin="1.4s"
+                      fill="freeze"
+                    />
+                  </rect>
+                  <rect
+                    x="38"
+                    y="78"
+                    width="50"
+                    height="4"
+                    rx="2"
+                    fill="#E2E8F0"
+                    opacity="0.9"
+                  >
+                    <animate
+                      attributeName="width"
+                      values="0;50"
+                      dur="1s"
+                      begin="1.7s"
+                      fill="freeze"
+                    />
+                  </rect>
+                  <rect
+                    x="38"
+                    y="86"
+                    width="42"
+                    height="4"
+                    rx="2"
+                    fill="#E2E8F0"
+                    opacity="0.9"
+                  >
+                    <animate
+                      attributeName="width"
+                      values="0;42"
+                      dur="1s"
+                      begin="2s"
+                      fill="freeze"
+                    />
+                  </rect>
+                </g>
+
+                <rect
+                  x="38"
+                  y="54"
+                  width="20"
+                  height="4"
+                  rx="2"
+                  fill="#A5B4FC"
+                  opacity="0"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0;0.3;0"
+                    dur="4s"
+                    begin="3s"
+                    repeatCount="indefinite"
+                  />
+                </rect>
+                <rect
+                  x="38"
+                  y="78"
+                  width="25"
+                  height="4"
+                  rx="2"
+                  fill="#A5B4FC"
+                  opacity="0"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0;0.3;0"
+                    dur="4s"
+                    begin="5s"
+                    repeatCount="indefinite"
+                  />
+                </rect>
+
+                <path
+                  d="M64 104 L80 124 L48 124 Z"
+                  fill="url(#summaryGradient)"
+                  filter="url(#searchGlow)"
+                >
+                  <animate
+                    attributeName="opacity"
+                    values="0.9;1;0.9"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                  <animateTransform
+                    attributeName="transform"
+                    type="scale"
+                    from="1 1"
+                    to="1.05 1.05"
+                    dur="2s"
+                    repeatCount="indefinite"
+                    additive="sum"
+                  />
+                </path>
+
+                <g>
+                  <circle cx="64" cy="114" r="1.5" fill="#2DD4BF">
+                    <animate
+                      attributeName="cy"
+                      values="114;104;94"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="cx"
+                      values="64;62;60"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="1;0"
+                      dur="2s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="66" cy="116" r="1.2" fill="#2DD4BF">
+                    <animate
+                      attributeName="cy"
+                      values="116;106;96"
+                      dur="1.7s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="cx"
+                      values="66;68;70"
+                      dur="1.7s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="1;0"
+                      dur="1.7s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="62" cy="115" r="1" fill="#2DD4BF">
+                    <animate
+                      attributeName="cy"
+                      values="115;105;95"
+                      dur="2.3s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="cx"
+                      values="62;60;58"
+                      dur="2.3s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="1;0"
+                      dur="2.3s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="68" cy="115" r="0.8" fill="#2DD4BF">
+                    <animate
+                      attributeName="cy"
+                      values="115;105;95"
+                      dur="1.9s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="cx"
+                      values="68;70;72"
+                      dur="1.9s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="1;0"
+                      dur="1.9s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="60" cy="114" r="0.8" fill="#2DD4BF">
+                    <animate
+                      attributeName="cy"
+                      values="114;104;94"
+                      dur="2.1s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="cx"
+                      values="60;58;56"
+                      dur="2.1s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="1;0"
+                      dur="2.1s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                </g>
+
+                <circle
+                  cx="92"
+                  cy="42"
+                  r="12"
+                  fill="url(#checkGradient)"
+                  filter="url(#searchGlow)"
+                >
+                  <animate
+                    attributeName="r"
+                    values="12;12.5;12"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+
+                <circle
+                  cx="92"
+                  cy="42"
+                  r="14"
+                  fill="none"
+                  stroke="#FB923C"
+                  stroke-width="0.5"
+                  opacity="0.5"
+                >
+                  <animate
+                    attributeName="r"
+                    values="14;16;14"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0.5;0.1;0.5"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+
+                <path
+                  d="M86 42 L90 46 L98 38"
+                  stroke="white"
+                  stroke-width="2.5"
+                  fill="none"
+                  stroke-linecap="round"
+                >
+                  <animate
+                    attributeName="stroke-width"
+                    values="2.5;3;2.5"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="stroke"
+                    values="white;#FFFBEB;white"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </path>
+
+                <circle
+                  cx="38"
+                  cy="88"
+                  r="9"
+                  fill="none"
+                  stroke="url(#searchGradient)"
+                  stroke-width="3"
+                  filter="url(#searchGlow)"
+                  stroke-dasharray="0,0,0"
+                >
+                  <animate
+                    attributeName="stroke-width"
+                    values="3;3.5;3"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+
+                <line
+                  x1="44"
+                  y1="94"
+                  x2="48"
+                  y2="98"
+                  stroke="url(#searchGradient)"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  filter="url(#searchGlow)"
+                >
+                  <animate
+                    attributeName="stroke-width"
+                    values="3;3.5;3"
+                    dur="2s"
+                    repeatCount="indefinite"
+                  />
+                </line>
+
+                <circle
+                  cx="38"
+                  cy="88"
+                  r="6"
+                  fill="none"
+                  stroke="#F472B6"
+                  stroke-width="0.8"
+                  opacity="0.5"
+                >
+                  <animate
+                    attributeName="r"
+                    values="6;12;6"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                  <animate
+                    attributeName="opacity"
+                    values="0.5;0;0.5"
+                    dur="3s"
+                    repeatCount="indefinite"
+                  />
+                </circle>
+
+                <g>
+                  <path
+                    d="M60 96 C65,90 75,85 85,65"
+                    fill="none"
+                    stroke="#A5B4FC"
+                    stroke-width="0.5"
+                    opacity="0.4"
+                    stroke-dasharray="1,2"
+                  >
+                    <animate
+                      attributeName="opacity"
+                      values="0.2;0.4;0.2"
+                      dur="5s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+                  <path
+                    d="M50 95 C45,80 40,70 50,55"
+                    fill="none"
+                    stroke="#A5B4FC"
+                    stroke-width="0.5"
+                    opacity="0.4"
+                    stroke-dasharray="1,2"
+                  >
+                    <animate
+                      attributeName="opacity"
+                      values="0.4;0.2;0.4"
+                      dur="4s"
+                      repeatCount="indefinite"
+                    />
+                  </path>
+
+                  <circle cx="64" cy="64" r="1.2" fill="#F472B6" opacity="0.7">
+                    <animateMotion
+                      path="M0,0 a30,20 0 1,0 1,0 z"
+                      dur="10s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0.7;0.3;0.7"
+                      dur="10s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="64" cy="64" r="0.8" fill="#2DD4BF" opacity="0.6">
+                    <animateMotion
+                      path="M0,0 a25,35 0 1,1 1,0 z"
+                      dur="15s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0.6;0.2;0.6"
+                      dur="15s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                  <circle cx="64" cy="64" r="1" fill="#FB923C" opacity="0.5">
+                    <animateMotion
+                      path="M0,0 a40,30 0 1,0 1,0 z"
+                      dur="20s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="opacity"
+                      values="0.5;0.1;0.5"
+                      dur="20s"
+                      repeatCount="indefinite"
+                    />
+                  </circle>
+                </g>
+
+                <g opacity="0.7">
+                  <rect
+                    x="90"
+                    y="78"
+                    width="6"
+                    height="10"
+                    rx="1"
+                    fill="#A5B4FC"
+                  >
+                    <animate
+                      attributeName="opacity"
+                      values="0.7;0;0.7"
+                      dur="1s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="x"
+                      values="90;88;90"
+                      dur="5s"
+                      repeatCount="indefinite"
+                    />
+                    <animate
+                      attributeName="y"
+                      values="78;76;78"
+                      dur="5s"
+                      repeatCount="indefinite"
+                    />
+                  </rect>
+                </g>
+              </svg>
+    )
+}
+
+export default PopupSVG;

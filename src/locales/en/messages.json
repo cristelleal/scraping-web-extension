@@ -1,7 +1,7 @@
 {
   "extName": {
     "message": "name in src/locales/en/messages.json",
-    "description": "Web Scraping Extension"
+    "description": "WebSummary"
   },
   "extDescription": {
     "message": "description in src/locales/en/messages.json",

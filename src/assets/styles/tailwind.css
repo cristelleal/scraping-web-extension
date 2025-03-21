@@ -1,11 +1,11 @@
 @import "tailwindcss";
 
-@theme {
+:root {
     --animate-spin-slow: spin 20s linear infinite;
+}
 
-    @keyframes spin {
-        to {
-            transform: rotate(360deg);
-        }
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
